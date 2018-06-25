@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Rock Paper Scissors Project</title>
+
+  <script>
+   function computerPlay(choice) {
+      
+      return choice[Math.floor(Math.random()*choice.length)];
+      
+      }
+      
+   let choice = ["ROCK", "PAPER", "SCISSORS"];
+    
+   let result = {
+    playerWins: "Player Wins", 
+    computerWins: "Computer Wins",
+    draw: "Draw"
+    };
+   
+   let tally(playerWins, computerWins) {
+    let playerWins = 0;
+    let computerWins = 0;
+    }
+   
+   function playSingleRound(playerSelection, computerSelection) {
+      if (playerSelection = "ROCK" && computerSelection = "ROCK") {
+        console.log("It's a draw! You both picked 'rock'!");
+        tally(playerWins++,computerWins++);
+        }
+      if (playerSelection = "ROCK" && computerSelection = "PAPER") {
+        console.log("You lose! Paper beats Rock!");
+        tally(playerWins, computerWins++);
+        }
+      if (playerSelection= "ROCK" && computerSelection = "SCISSORS") {
+        console.log("You win! Rock beats Scissors!");
+        tally(playerWins++, computerWins);
+        }
+        
+        
+      if (playerSelection = "PAPER" && computerSelection = "ROCK") {
+        console.log("You win! Paper beats Rock!");
+        tally(playerWins++, computerWins);
+        }
+      if (playerSelection = "PAPER" && computerSelection = "PAPER") {
+        console.log("It's a draw! You both picked Paper!");
+        tally(playerWins++, computerWins++);
+        }
+      if (playerSelection= "PAPER" && computerSelection = "SCISSORS") {
+        console.log("You lose! Scissors beats Paper!");
+        tally(playerWins,computerWins++);
+        }
+        
+        
+        if (playerSelection = "SCISSORS" && computerSelection = "ROCK") {
+        console.log("You lose! Rock beats Scissors!");
+        tally(playerWins,computerWins++);
+        }
+      if (playerSelection = "SCISSORS" && computerSelection = "PAPER") {
+        console.log("You win! Scissors beats Paper!");
+        tally(playerWins++,computerWins);
+        }
+      if (playerSelection= "SCISSORS" && computerSelection = "SCISSORS") {
+        console.log("It's a draw! You both picked Scissors!");
+        tally(playerWins++,computerWins++);
+        }
+       }
+      
+      
+   
+   const playerSelection = 'rock';
+   let playerSelectionValue = playerSelection.toUpperCase();
+   const computerSelection = computerPlay(choice)
+   
+   
+  </script>
+</body>
+</html>
